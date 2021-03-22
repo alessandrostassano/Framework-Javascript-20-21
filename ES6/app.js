@@ -19,15 +19,18 @@ const parole = ["latte", "casa", "mario", "mela"];
 const findWord = word => item => item === world
 
 //ESEMPI FUNZIONI DI ORDINE SUPERIORE, in Jvascript NON si usa USE
-/*abbiamo funzione findWord:
- function findWord(word) {
-     restituisce un'altra funzione  --> return function(item) {
+//abbiamo funzione findWord:
+function findWord(word) {
+    //qui sto cercando un modo per far si che riesca a confrontare una parola introdotta con l'array di parole
+    return function (item) {
+        return item === word
+    }/*restituisce un'altra funzione  --> return function(item) {
          -la funzione che fa da filtro restituisce false o true-
-         return item === word
-     }
+         return item === word*/
+}
 
-     SCRITTURA FUNZIONE ORDINE SUPERIORE IN JS : const findWord = word => item => item === world
- }*/
+//SCRITTURA FUNZIONE ORDINE SUPERIORE IN JS : const findWord = word => item => item === world
+
 
 
 const result = parole.filter(findWord("mela"))

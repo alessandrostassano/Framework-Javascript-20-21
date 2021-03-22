@@ -19,15 +19,18 @@
             console.log("il valore di fuori è", fuori)
             //stiamo capendo come funziona l'interprete
             function funzioneDentroInterna(params) {
+                //dichiaro dentro la funzione più interna una variabile con stesso nome di una in un contesto funzionale più esterno, in questo caso fuori:
+                const fuori = 1000
                 //la funzione contenuta vede le variabili
                 console.log("Il valore id dentroIterna è ", dentroInterna)
-                console.log("il valore di fuori dentro fuznione interna", fuori)
+                console.log("il valore di fuori dentro funzioneInterna è", fuori)
             }
 
             funzioneDentroInterna()
         }
 
         funzioneInterna();
+        console.log(dentroInterna) //--> in questo caso la console dice "undefined", perchè una variabile dichiarata in un am bito più interno non può vivere in ambito più esterno
     </script>
 </body>
 </html>
