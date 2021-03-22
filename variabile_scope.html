@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabile scope</title>
+</head>
+<body>
+    <script>
+        //subito dopo l'inizio dello script abbiamo il contesto di esecuzione globale global scope
+        const fuori = 10 
+
+        function funzioneInterna() {
+            //da qui inizio il contesto di esecuzione della funzione aprticolare strutturata a cerchi concentrici
+
+            //la struttura di queste funzioni, e della visbilità delle loro variabili è a cerchi concentrici
+            const dentroInterna = 20 //questo valore ha un ambito che va dall'interno verso l'esterno 
+            console.log("il valore di fuori è", fuori)
+            //stiamo capendo come funziona l'interprete
+            function funzioneDentroInterna(params) {
+                //la funzione contenuta vede le variabili
+                console.log("Il valore id dentroIterna è ", dentroInterna)
+                console.log("il valore di fuori dentro fuznione interna", fuori)
+            }
+
+            funzioneDentroInterna()
+        }
+
+        funzioneInterna();
+    </script>
+</body>
+</html>

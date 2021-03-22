@@ -16,7 +16,7 @@ dispari = numeri.filter(numero => numero % 2 !==0)*/
 const parole = ["latte", "casa", "mario", "mela"];
 //non posso prendere parole, fare filter, e poi 
 
-//const findWord = word => item => item === world
+const findWord = word => item => item === world
 
 //ESEMPI FUNZIONI DI ORDINE SUPERIORE, in Jvascript NON si usa USE
 /*abbiamo funzione findWord:
